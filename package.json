@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r ./src/index.js"
+    "start": "nodemon -r ./src/index.js",
+    "server": "nodemon -r ./src/index.js",
+    "client": "npm start --prefix nubank-react",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
     "pdftohtmljs": "^0.5.3"
   },
   "devDependencies": {
+    "concurrently": "^5.1.0",
     "nodemon": "^2.0.2"
   }
 }
