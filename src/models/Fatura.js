@@ -2,7 +2,19 @@ const mongoose = require('mongoose');
 
 const FaturaSchema = new mongoose.Schema({
     date: Date,
-    texts: Array,
+    contas: {
+        type: Array,
+        default: []
+    },
+    info: {
+        type: Array,
+        default: []
+    },
+    fiadores: {
+        type: Array,
+        default: []
+    },
+    vencimento: String
 }, {
     timestamps: true,
 });
